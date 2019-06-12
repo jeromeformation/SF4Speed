@@ -31,6 +31,7 @@ class TutoController extends AbstractController
     public function new(Request $request): Response
     {
         $tuto = new Tuto();
+        $tuto->setSlug('ffff');
         $form = $this->createForm(TutoType::class, $tuto);
         $form->handleRequest($request);
 
